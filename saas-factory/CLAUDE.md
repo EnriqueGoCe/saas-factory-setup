@@ -69,6 +69,9 @@ Usuario dice algo
     ├── "Genera una imagen / thumbnail / logo / banner"
     |       → Ejecutar skill IMAGE-GENERATION (OpenRouter + Gemini)
     |
+    ├── "Genera imagenes para un video / paquete visual / sketchnote"
+    |       → Ejecutar skill VIDEO-VISUALS (paquete visual narrativo estilo sketchnote)
+    |
     ├── "Optimiza este skill / mejora el skill / autoresearch"
     |       → Ejecutar skill AUTORESEARCH (loop autonomo de mejora)
     |
@@ -78,7 +81,7 @@ Usuario dice algo
 
 ---
 
-## Skills: 15 Herramientas Especializadas
+## Skills: 19 Herramientas Especializadas
 
 | # | Skill | Cuando usarlo |
 |---|-------|---------------|
@@ -88,18 +91,19 @@ Usuario dice algo
 | 4 | `add-emails` | Emails transaccionales: Resend + React Email + batch + unsubscribe |
 | 5 | `add-mobile` | PWA instalable + notificaciones push (iOS compatible, 14 commits de gotchas) |
 | 6 | `website-3d` | Landing cinematica Apple-style: scroll-driven video + copy AIDA/PAS |
-| 4 | `prp` | Plan de feature compleja antes de implementar. Siempre antes de bucle-agentico |
-| 5 | `bucle-agentico` | Features complejas: multiples fases coordinadas (DB + API + UI) |
-| 6 | `ai` | Capacidades de IA: chat, RAG, vision, tools, web search |
-| 7 | `supabase` | Todo BD: crear tablas, RLS, migraciones, queries, metricas, CRUD |
-| 8 | `playwright-cli` | Testing automatizado con browser real |
-| 9 | `primer` | Cargar contexto completo del proyecto al inicio de sesion |
-| 10 | `update-sf` | Actualizar SaaS Factory a la ultima version |
-| 11 | `eject-sf` | Remover SaaS Factory del proyecto. DESTRUCTIVO. Confirmar siempre |
-| 12 | `memory-manager` | Memoria persistente POR PROYECTO en `.claude/memory/` (git-versioned) |
-| 13 | `image-generation` | Generar y editar imagenes con OpenRouter + Gemini |
-| 14 | `autoresearch` | Auto-optimizar skills con loop autonomo (patron Karpathy) |
-| 15 | `skill-creator` | Crear nuevos skills para extender la fabrica |
+| 7 | `prp` | Plan de feature compleja antes de implementar. Siempre antes de bucle-agentico |
+| 8 | `bucle-agentico` | Features complejas: multiples fases coordinadas (DB + API + UI) |
+| 9 | `ai` | Capacidades de IA: chat, RAG, vision, tools, web search |
+| 10 | `supabase` | Todo BD: crear tablas, RLS, migraciones, queries, metricas, CRUD |
+| 11 | `playwright-cli` | Testing automatizado con browser real |
+| 12 | `primer` | Cargar contexto completo del proyecto al inicio de sesion |
+| 13 | `update-sf` | Actualizar SaaS Factory a la ultima version |
+| 14 | `eject-sf` | Remover SaaS Factory del proyecto. DESTRUCTIVO. Confirmar siempre |
+| 15 | `memory-manager` | Memoria persistente POR PROYECTO en `.claude/memory/` (git-versioned) |
+| 16 | `image-generation` | Generar y editar imagenes con OpenRouter + Gemini |
+| 17 | `video-visuals` | Paquetes visuales narrativos estilo sketchnote para videos y presentaciones |
+| 18 | `autoresearch` | Auto-optimizar skills con loop autonomo (patron Karpathy) |
+| 19 | `skill-creator` | Crear nuevos skills para extender la fabrica |
 
 ---
 
@@ -113,7 +117,7 @@ Usuario dice algo
 3. ADD-LOGIN → Auth completo
 4. ADD-PAYMENTS → Pagos con Polar (si el proyecto cobra)
 5. PRP → Plan de primera feature
-5. BUCLE-AGENTICO → Implementar fase por fase
+6. BUCLE-AGENTICO → Implementar fase por fase
 6. PLAYWRIGHT-CLI → Verificar que todo funciona
 ```
 
@@ -269,9 +273,12 @@ npm run lint         # ESLint
 │   ├── project/              # Decisiones y estado de iniciativas
 │   └── reference/            # Patrones, soluciones, donde encontrar cosas
 │
-├── skills/                    # 15 skills especializados
+├── skills/                    # 19 skills especializados
 │   ├── new-app/              # Entrevista de negocio
 │   ├── add-login/            # Auth completo
+│   ├── add-payments/         # Pagos con Polar
+│   ├── add-emails/           # Emails transaccionales con Resend
+│   ├── add-mobile/           # PWA + push notifications
 │   ├── website-3d/           # Landing pages cinematicas
 │   ├── prp/                  # Generar PRPs
 │   ├── bucle-agentico/       # Bucle Agentico BLUEPRINT
@@ -283,6 +290,7 @@ npm run lint         # ESLint
 │   ├── eject-sf/             # Remover SF
 │   ├── memory-manager/       # Memoria persistente por proyecto
 │   ├── image-generation/     # Generacion de imagenes (OpenRouter + Gemini)
+│   ├── video-visuals/        # Paquetes visuales narrativos estilo sketchnote
 │   ├── autoresearch/         # Auto-optimizacion de skills
 │   └── skill-creator/        # Crear nuevos skills
 │

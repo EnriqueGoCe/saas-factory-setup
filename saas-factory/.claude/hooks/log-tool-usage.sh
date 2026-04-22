@@ -1,14 +1,17 @@
 #!/bin/bash
 # PostToolUse hook: Log all tool usage for tracking and debugging
-# This hook runs after any tool execution to maintain an audit log
 
 timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+input=$(cat)
 
-# Create logs directory if it doesn't exist
+if command -v jq &>/dev/null; then
+  tool_name=$(echo "$input" | jq -r '.tool_name // "unknown"')
+  file_path=$(echo "$input" | jq -r '.tool_input.file_path // .tool_input.command // ""')
+else
+  tool_name="unknown"
+  file_path=""
+fi
+
 mkdir -p .claude/logs
-
-# Log the tool usage
-echo "[$timestamp] Claude made an edit " >> .claude/logs/tool-usage.log
-
-# Always return success to avoid blocking tools
+echo "[$timestamp] $tool_name${file_path:+ → $file_path}" >> .claude/logs/tool-usage.log
 echo "{}"

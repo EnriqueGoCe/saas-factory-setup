@@ -1,0 +1,10 @@
+# Claude Code local artifacts
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
+
+# Playwright MCP screenshots/logs
+.playwright-mcp/
+
+# OS / editor
+.DS_Store
+Thumbs.db

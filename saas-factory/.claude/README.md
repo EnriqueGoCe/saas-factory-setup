@@ -131,34 +131,29 @@ npm run typecheck    # TypeScript check
 > V4 migra TODO a Skills 2.0. Hot reload, auto-discovery, zero config.
 > Cada skill es una carpeta con `SKILL.md` (frontmatter YAML + instrucciones).
 
-### Invocables por el Usuario (/)
+### Skills (19 total)
 
 | Skill | Comando | Descripcion |
 |-------|---------|-------------|
 | `new-app` | `/new-app` | Entrevista de negocio → BUSINESS_LOGIC.md |
-| `landing` | `/landing` | Landing page de alta conversion (entrevista + ejecucion) |
 | `primer` | `/primer` | Inicializar contexto del proyecto |
-| `add-login` | `/add-login` | Auth completo Supabase (login, signup, password reset, profiles, RLS) |
-| `eject-sf` | `/eject-sf` | Remover SaaS Factory del proyecto (DESTRUCTIVO) |
-| `update-sf` | `/update-sf` | Actualizar a ultima version |
-| `bucle-agentico` | `/bucle-agentico` | Bucle Agentico para sistemas complejos (por fases) |
-| `sprint` | `/sprint` | Bucle Agentico para tareas rapidas |
+| `website-3d` | `/website-3d` | Landing cinematica scroll-driven + copy AIDA/PAS |
+| `add-login` | `/add-login` | Auth completo Supabase (Email + Google OAuth + profiles + RLS) |
+| `add-payments` | `/add-payments` | Pagos con Polar (MoR): checkout, webhooks, suscripciones |
+| `add-emails` | `/add-emails` | Emails transaccionales: Resend + React Email + batch + unsubscribe |
+| `add-mobile` | `/add-mobile` | PWA instalable + push notifications (iOS compatible) |
+| `ai` | `/ai [template]` | Implementar AI Templates (chat, RAG, vision, tools, web search) |
 | `prp` | `/prp [feature]` | Generar Product Requirements Proposal |
-| `ai` | `/ai [template]` | Implementar AI Templates (chat, RAG, vision, tools) |
-| `qa` | `/qa [descripcion]` | QA automatizado con Playwright CLI |
+| `bucle-agentico` | `/bucle-agentico` | Bucle Agentico para sistemas complejos (por fases) |
+| `supabase` | `/supabase` | BD completa: tablas, RLS, migraciones, queries, metricas |
+| `playwright-cli` | `/playwright-cli` | QA automatizado con Playwright CLI |
+| `memory-manager` | `/memory-manager` | Memoria persistente por proyecto (git-versioned) |
+| `image-generation` | `/image-generation` | Generar/editar imagenes con OpenRouter + Gemini |
+| `video-visuals` | `/video-visuals` | Paquetes visuales narrativos estilo sketchnote |
+| `autoresearch` | `/autoresearch [skill]` | Auto-optimizar skills con loop autonomo (Karpathy) |
 | `skill-creator` | `/skill-creator` | Crear nuevos skills |
-
-### Invocables por Claude (automaticos)
-
-| Skill | Se activa cuando... |
-|-------|---------------------|
-| `backend` | Tareas de Server Actions, APIs, logica de negocio, validaciones |
-| `frontend` | UI/UX, componentes React, Tailwind, animaciones |
-| `supabase-admin` | Migraciones, RLS, queries SQL, auth config |
-| `codebase-analyst` | Analisis de patrones, convenciones, arquitectura |
-| `vercel-deployer` | Deploy, env vars, dominios, rollbacks |
-| `documentacion` | Actualizar docs despues de cambios en codigo |
-| `calidad` | Testing, quality gates, validacion |
+| `update-sf` | `/update-sf` | Actualizar a ultima version |
+| `eject-sf` | `/eject-sf` | Remover SaaS Factory del proyecto (DESTRUCTIVO) |
 
 ### Crear un Nuevo Skill
 
@@ -244,24 +239,24 @@ Sistemas de diseno visuales en `.claude/design-systems/`.
 .claude/
 ├── skills/                    # Skills 2.0 (V4) - 19 skills
 │   ├── new-app/              # Entrevista de negocio
-│   ├── landing/              # Landing pages
 │   ├── primer/               # Context initialization
+│   ├── website-3d/           # Landing cinematica scroll-driven
 │   ├── add-login/            # Auth completo
-│   ├── eject-sf/             # Remover SF
-│   ├── update-sf/            # Actualizar SF
-│   ├── bucle-agentico/       # Bucle Agentico BLUEPRINT
-│   ├── sprint/               # Bucle Agentico SPRINT
-│   ├── prp/                  # Generar PRPs
+│   ├── add-payments/         # Pagos con Polar (MoR)
+│   ├── add-emails/           # Emails transaccionales con Resend
+│   ├── add-mobile/           # PWA + push notifications
 │   ├── ai/                   # AI Templates hub
-│   ├── qa/                   # Playwright CLI QA
-│   ├── backend/              # Agent: backend specialist
-│   ├── frontend/             # Agent: frontend specialist
-│   ├── supabase-admin/       # Agent: Supabase admin
-│   ├── codebase-analyst/     # Agent: pattern analysis
-│   ├── vercel-deployer/      # Agent: deployment
-│   ├── documentacion/        # Agent: documentation
-│   ├── calidad/              # Agent: testing & QA
-│   └── skill-creator/        # Crear nuevos skills
+│   ├── prp/                  # Generar PRPs
+│   ├── bucle-agentico/       # Bucle Agentico por fases
+│   ├── supabase/             # BD completa
+│   ├── playwright-cli/       # QA automatizado
+│   ├── memory-manager/       # Memoria persistente del proyecto
+│   ├── image-generation/     # Generacion de imagenes
+│   ├── video-visuals/        # Paquetes visuales sketchnote
+│   ├── autoresearch/         # Auto-optimizacion de skills
+│   ├── skill-creator/        # Crear nuevos skills
+│   ├── update-sf/            # Actualizar SF
+│   └── eject-sf/             # Remover SF
 │
 ├── PRPs/                      # Product Requirements Proposals
 │   └── prp-base.md           # Template base

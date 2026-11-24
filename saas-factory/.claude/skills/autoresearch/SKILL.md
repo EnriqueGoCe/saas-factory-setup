@@ -254,12 +254,12 @@ Autoresearch los OPTIMIZA despues de creados.
 
 ## Quick Start
 
-Usuario dice: "Optimiza el skill de landing"
+Usuario dice: "Optimiza el skill de website-3d"
 
-1. Leo `landing/SKILL.md` completo
+1. Leo `website-3d/SKILL.md` completo
 2. Propongo 4 criterios binarios (basado en el tipo: texto + codigo)
 3. El usuario confirma o ajusta
-4. Creo branch `autoresearch/landing`
+4. Creo branch `autoresearch/website-3d`
 5. Corro baseline (5 ejecuciones, evaluo, score X/20)
 6. Muestro baseline, usuario dice "dale"
 7. Loop autonomo hasta target o max_iterations

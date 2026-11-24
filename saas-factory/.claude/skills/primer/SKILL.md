@@ -49,24 +49,26 @@ Tienes 3 MCPs conectados. Usalos:
 | **Playwright** | `browser_navigate`, `browser_snapshot`, `browser_click` | Validacion visual, testing UI |
 
 ### Skills Disponibles
-Delega tareas complejas usando los skills especializados:
+Activa skills especializados segun la tarea:
 
 | Skill | Responsabilidad |
 |-------|-----------------|
-| `frontend` | UI/UX, componentes, Tailwind, animaciones |
-| `backend` | Server Actions, APIs, logica de negocio |
-| `supabase-admin` | Migraciones, RLS policies, queries complejas |
-| `calidad` | Tests, quality gates, verificacion |
-| `vercel-deployer` | Deploy, env vars, dominios |
-| `documentacion` | README, docs tecnicos |
-| `codebase-analyst` | Patrones, convenciones del proyecto |
+| `supabase` | Tablas, RLS, migraciones, queries, metricas |
+| `playwright-cli` | Tests, QA automatizado, verificacion visual |
+| `ai` | Capacidades IA: chat, RAG, vision, tools |
+| `image-generation` | Generar imagenes con OpenRouter + Gemini |
+| `video-visuals` | Paquetes visuales sketchnote para videos |
+| `memory-manager` | Memoria persistente del proyecto |
 
 ### Skills Slash Disponibles
 - `primer` - Este skill (contexto inicial)
 - `prp` - Generar Product Requirements Proposal
 - `new-app` - Crear nueva aplicacion desde cero
-- `landing` - Crear landing page de alta conversion
+- `website-3d` - Landing cinematica scroll-driven + copy AIDA/PAS
 - `add-login` - Inyectar sistema de autenticacion completo
+- `add-payments` - Pagos con Polar (MoR)
+- `add-emails` - Emails transaccionales con Resend
+- `add-mobile` - PWA + push notifications
 - `eject-sf` - Eliminar configuracion SaaS Factory
 - `update-sf` - Actualizar a la ultima version
 

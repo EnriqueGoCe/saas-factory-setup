@@ -84,26 +84,27 @@ src/
 
 ## Skills (19 total)
 
-### Para el usuario
-
 | Skill | Que hace |
 |-------|----------|
 | `/new-app` | Entrevista de negocio → BUSINESS_LOGIC.md |
-| `/landing` | Landing page de alta conversion |
-| `/add-login` | Auth completo (Email + Google OAuth + profiles + RLS) |
-| `/bucle-agentico` | Implementar features complejas por fases |
-| `/sprint` | Tareas rapidas sin planificacion |
-| `/prp` | Planificar features complejas antes de implementar |
-| `/ai [template]` | Agregar IA: chat, RAG, vision, tools |
-| `/qa` | QA automatizado con Playwright CLI |
 | `/primer` | Inicializar contexto del proyecto |
+| `/website-3d` | Landing cinematica scroll-driven + copy AIDA/PAS |
+| `/add-login` | Auth completo (Email + Google OAuth + profiles + RLS) |
+| `/add-payments` | Pagos con Polar (MoR): checkout, webhooks, suscripciones |
+| `/add-emails` | Emails transaccionales con Resend + React Email |
+| `/add-mobile` | PWA instalable + push notifications |
+| `/ai [template]` | Agregar IA: chat, RAG, vision, tools, web search |
+| `/prp` | Planificar features complejas antes de implementar |
+| `/bucle-agentico` | Implementar features complejas por fases |
+| `/supabase` | BD completa: tablas, RLS, migraciones, queries, metricas |
+| `/playwright-cli` | QA automatizado con Playwright CLI |
+| `/memory-manager` | Memoria persistente por proyecto (git-versioned) |
+| `/image-generation` | Generar y editar imagenes con OpenRouter + Gemini |
+| `/video-visuals` | Paquetes visuales narrativos estilo sketchnote |
+| `/autoresearch` | Auto-optimizar skills con loop autonomo (Karpathy) |
+| `/skill-creator` | Crear nuevos skills |
 | `/update-sf` | Actualizar a ultima version |
 | `/eject-sf` | Remover SaaS Factory (destructivo) |
-| `/skill-creator` | Crear nuevos skills |
-
-### Automaticos (Claude los activa segun la tarea)
-
-backend, frontend, supabase-admin, codebase-analyst, vercel-deployer, documentacion, calidad
 
 ## AI Templates
 

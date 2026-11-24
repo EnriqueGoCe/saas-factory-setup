@@ -32,29 +32,26 @@ saas-factory-setup/
     │   └── shared/             # Libs y componentes compartidos
     │
     └── .claude/
-        ├── skills/             # 22 Skills (V4) — Core del sistema
+        ├── skills/             # 19 Skills (V4) — Core del sistema
         │   ├── new-app/        # Entrevista de negocio
-        │   ├── landing/        # Landing cinematica scroll-stop + AIDA/PAS
+        │   ├── website-3d/     # Landing cinematica scroll-stop + AIDA/PAS
         │   ├── primer/         # Context initialization
         │   ├── add-login/      # Auth completo Supabase
+        │   ├── add-payments/   # Pagos con Polar (MoR)
+        │   ├── add-emails/     # Emails transaccionales con Resend
+        │   ├── add-mobile/     # PWA + push notifications
         │   ├── ai/             # 11 AI Templates (chat, RAG, vision, tools...)
         │   ├── prp/            # Product Requirements Proposals
         │   ├── bucle-agentico/ # Features complejas por fases
-        │   ├── sprint/         # Tareas rapidas
         │   ├── playwright-cli/ # QA automatizado
+        │   ├── supabase/       # BD: tablas, RLS, migraciones, queries, metricas
         │   ├── memory-manager/ # Memoria persistente por proyecto
         │   ├── image-generation/ # Generacion de imagenes (OpenRouter + Gemini)
+        │   ├── video-visuals/  # Paquetes visuales narrativos estilo sketchnote
         │   ├── autoresearch/   # Auto-optimizacion de skills (Karpathy)
         │   ├── skill-creator/  # Crear nuevos skills
         │   ├── eject-sf/       # Remover SaaS Factory
-        │   ├── update-sf/      # Actualizar version
-        │   ├── backend/        # Agent: Server Actions, APIs
-        │   ├── frontend/       # Agent: React, Tailwind, UI/UX
-        │   ├── supabase-admin/ # Agent: Migraciones, RLS, SQL
-        │   ├── codebase-analyst/ # Agent: Analisis de arquitectura
-        │   ├── vercel-deployer/ # Agent: Deploy a produccion
-        │   ├── documentacion/  # Agent: Mantener docs
-        │   └── calidad/        # Agent: Testing, quality gates
+        │   └── update-sf/      # Actualizar version
         │
         ├── memory/             # Memoria persistente (git-versioned)
         │   ├── MEMORY.md       # Indice (max 200 lineas)
@@ -95,7 +92,7 @@ saas-factory-setup/
 | `.claude/agents/*.md` | `.claude/skills/*/SKILL.md` (user-invocable: false, context: fork) |
 | `.claude/prompts/*.md` | `.claude/skills/*/SKILL.md` |
 | `.claude/ai_templates/` | `.claude/skills/ai/references/` |
-| 7 commands + 7 agents + prompts (fragmentado) | 22 skills unificados con YAML metadata |
+| 7 commands + 7 agents + prompts (fragmentado) | 19 skills unificados con YAML metadata |
 | System prompt como "lista de herramientas" | Decision tree: input → skill activation |
 
 ### Anatomy de un Skill
@@ -163,10 +160,13 @@ Para crear un nuevo proyecto:
 
 Skills disponibles:
 - /new-app           → Define tu SaaS (genera BUSINESS_LOGIC.md)
-- /landing           → Landing cinematica scroll-stop + copy AIDA/PAS
+- /website-3d        → Landing cinematica scroll-stop + copy AIDA/PAS
+- /add-login         → Auth completo con Supabase
+- /add-payments      → Pagos con Polar (MoR)
 - /ai [template]     → Agrega IA (chat, RAG, vision, tools...)
 - /memory-manager    → Activa memoria persistente del proyecto
 - /image-generation  → Genera imagenes con IA
+- /video-visuals     → Paquetes visuales estilo sketchnote
 - /autoresearch      → Auto-optimiza tus skills
 ```
 
@@ -188,7 +188,7 @@ Skills disponibles:
 **Ultima actualizacion:** 2026-03-15
 
 **V4 incluye:**
-- 22 skills unificados (reemplaza commands + agents + prompts)
+- 19 skills unificados (reemplaza commands + agents + prompts)
 - Memoria persistente por proyecto (`.claude/memory/`)
 - Landing cinematica scroll-stop + copy AIDA/PAS
 - Image generation con OpenRouter + Gemini

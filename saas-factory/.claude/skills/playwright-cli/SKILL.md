@@ -161,11 +161,11 @@ Crear el archivo `.qa-reports/[YYYY-MM-DD]-[nombre]/report.md`:
 
 | Comando | Que hace |
 |---------|----------|
-| `/qa verify [flujo]` | Verificar que un flujo funciona correctamente |
-| `/qa reproduce [bug]` | Intentar reproducir un bug reportado |
-| `/qa full [feature]` | QA completo de una feature (happy path + edge cases) |
+| `/playwright-cli verify [flujo]` | Verificar que un flujo funciona correctamente |
+| `/playwright-cli reproduce [bug]` | Intentar reproducir un bug reportado |
+| `/playwright-cli full [feature]` | QA completo de una feature (happy path + edge cases) |
 
-### Ejemplo: `/qa verify login flow`
+### Ejemplo: `/playwright-cli verify login flow`
 
 ```
 Fase 1: SETUP - Verificar flujo de login. Criterio: usuario puede loguearse y ver dashboard.

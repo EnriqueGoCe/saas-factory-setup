@@ -16,7 +16,7 @@
 <p align="center">
   <a href="#que-es-saas-factory">Que Es</a> &bull;
   <a href="#el-golden-path">Tech Stack</a> &bull;
-  <a href="#15-skills-tu-caja-de-herramientas">15 Skills</a> &bull;
+  <a href="#19-skills-tu-caja-de-herramientas">19 Skills</a> &bull;
   <a href="#3-mcps-tus-sentidos">MCPs</a> &bull;
   <a href="#instalacion-2-minutos">Instalacion</a>
 </p>
@@ -42,7 +42,7 @@ tu-proyecto/
 ├── .mcp.json                  # 3 MCPs configurados (Next.js, Playwright, Supabase)
 ├── src/                       # App con Feature-First Architecture
 ├── .claude/
-│   ├── skills/                # 22 skills (V4) — Todo es un Skill
+│   ├── skills/                # 19 skills (V4) — Todo es un Skill
 │   ├── memory/                # Memoria persistente por proyecto
 │   ├── PRPs/                  # Blueprints de features
 │   └── design-systems/        # 5 sistemas de diseno
@@ -57,53 +57,43 @@ V4 unifica commands, agents y prompts en un solo concepto: **Skills**.
 
 ```
 V3: commands/ + agents/ + prompts/ (3 dirs, fragmentado)
-V4: skills/ (1 dir, 22 skills unificados con YAML metadata)
+V4: skills/ (1 dir, 19 skills unificados con YAML metadata)
 ```
 
 El usuario habla en lenguaje natural. El agente decide que skill activar:
 
 ```
 "Quiero crear una app" → skill NEW-APP (entrevista de negocio)
-"Necesito una landing" → skill LANDING (scroll-stop cinematico)
+"Necesito una landing" → skill WEBSITE-3D (scroll-stop cinematico)
 "Quiero agregar IA"    → skill AI (11 templates: chat, RAG, vision, tools...)
 "Optimiza este skill"  → skill AUTORESEARCH (loop autonomo de mejora)
 ```
 
 ---
 
-## 22 Skills: Tu Caja de Herramientas
-
-### Skills que el usuario invoca
+## 19 Skills: Tu Caja de Herramientas
 
 | Skill | Que hace |
 |-------|---------|
 | `/new-app` | Entrevista de negocio → genera `BUSINESS_LOGIC.md` con la especificacion completa |
-| `/landing` | Landing cinematica estilo Apple: scroll-driven video + copy AIDA/PAS + glass-morphism |
 | `/primer` | Carga contexto del proyecto al inicio de sesion |
+| `/website-3d` | Landing cinematica estilo Apple: scroll-driven video + copy AIDA/PAS + glass-morphism |
 | `/add-login` | Auth completo con Supabase (Email + Google OAuth + profiles + RLS) |
+| `/add-payments` | Pagos con Polar (MoR): checkout, webhooks, suscripciones |
+| `/add-emails` | Emails transaccionales: Resend + React Email + batch + unsubscribe |
+| `/add-mobile` | PWA instalable + push notifications (iOS compatible) |
 | `/ai [template]` | 11 templates de IA: chat, RAG, vision, tools, web search, structured outputs |
 | `/prp [feature]` | Genera Product Requirements Proposal antes de implementar |
 | `/bucle-agentico` | Implementa features complejas por fases coordinadas (DB + API + UI) |
-| `/sprint` | Tareas rapidas sin planificacion (un fix, un componente, algo simple) |
-| `/qa` | Testing automatizado con Playwright CLI |
+| `/supabase` | BD completa: tablas, RLS, migraciones, queries, metricas, CRUD |
+| `/playwright-cli` | Testing automatizado con Playwright CLI |
 | `/memory-manager` | Memoria persistente POR PROYECTO en `.claude/memory/` (reemplaza auto-memory) |
 | `/image-generation` | Genera y edita imagenes con OpenRouter + Gemini |
+| `/video-visuals` | Paquetes visuales narrativos estilo sketchnote para videos |
 | `/autoresearch` | Auto-optimiza skills con loop autonomo (patron Karpathy) |
 | `/skill-creator` | Crea nuevos skills para extender la fabrica |
-| `/eject-sf` | Remueve SaaS Factory del proyecto (destructivo) |
 | `/update-sf` | Actualiza a la ultima version |
-
-### Skills que el agente activa automaticamente
-
-| Skill | Se activa cuando... |
-|-------|---------------------|
-| `frontend` | UI/UX, componentes React, Tailwind, animaciones |
-| `backend` | Server Actions, APIs, logica de negocio, validaciones Zod |
-| `supabase-admin` | Migraciones, RLS, queries SQL, configurar auth |
-| `codebase-analyst` | Analisis de patrones, convenciones, arquitectura |
-| `vercel-deployer` | Deploy, env vars, dominios, rollbacks |
-| `documentacion` | Actualizar docs despues de cambios en codigo |
-| `calidad` | Testing, quality gates, validacion |
+| `/eject-sf` | Remueve SaaS Factory del proyecto (destructivo) |
 
 ---
 
@@ -312,7 +302,7 @@ Te deja con un proyecto Next.js limpio y funcional.
 |---------|-------------|
 | `saas-factory/CLAUDE.md` | Factory OS — Cerebro del agente (decision tree + skills) |
 | `saas-factory/GEMINI.md` | Espejo para Gemini |
-| `saas-factory/.claude/skills/SKILLS_README.md` | Inventario completo de 22 skills |
+| `saas-factory/.claude/skills/SKILLS_README.md` | Inventario completo de 19 skills |
 | `saas-factory/.claude/skills/ai/references/` | 11 AI Templates (chat, RAG, vision, tools...) |
 | `saas-factory/.claude/PRPs/` | Sistema de Blueprints |
 | `saas-factory/.claude/design-systems/` | 5 sistemas de diseno |
@@ -321,6 +311,6 @@ Te deja con un proyecto Next.js limpio y funcional.
 ---
 
 <p align="center">
-  <strong>SaaS Factory V4</strong> — Todo es un Skill. Agent-First. 22 skills. Memoria persistente.<br/>
+  <strong>SaaS Factory V4</strong> — Todo es un Skill. Agent-First. 19 skills. Memoria persistente.<br/>
   De la idea a produccion en minutos, no en meses.
 </p>
